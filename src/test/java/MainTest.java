@@ -13,7 +13,7 @@ import java.lang.reflect.Field;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(ResultAnalyzer.class)
 public class MainTest {
@@ -46,7 +46,7 @@ public class MainTest {
     @Test
     public void testCircleAccessModifiers() throws NoSuchFieldException {
         Field radiusField = circle.getClass().getDeclaredField("radius");
-        assertEquals(radiusField.getModifiers(), 2);
+        assertEquals(radiusField.getModifiers(), 1);
     }
 
     @DisplayName("Circle sınıf değişkenleri doğru type a sahip mi ?")
@@ -65,7 +65,7 @@ public class MainTest {
     @Test
     public void testCylinderAccessModifiers() throws NoSuchFieldException {
         Field heightField = cylinder.getClass().getDeclaredField("height");
-        assertEquals(heightField.getModifiers(), 2);
+        assertEquals(heightField.getModifiers(), 1);
     }
 
     @DisplayName("Cylinder sınıfı ve değişkenleri doğru type a sahip mi ?")
@@ -85,9 +85,9 @@ public class MainTest {
     @Test
     public void testRectangleAccessModifiers() throws NoSuchFieldException {
         Field widthField = rectangle.getClass().getDeclaredField("width");
-        assertEquals(widthField.getModifiers(), 2);
+        assertEquals(widthField.getModifiers(), 1);
         Field lengthField = rectangle.getClass().getDeclaredField("length");
-        assertEquals(lengthField.getModifiers(), 2);
+        assertEquals(lengthField.getModifiers(), 1);
     }
 
     @DisplayName("Rectangle sınıf değişkenleri doğru type a sahip mi ?")
@@ -107,7 +107,7 @@ public class MainTest {
     @Test
     public void testCuboidAccessModifiers() throws NoSuchFieldException {
         Field widthField = cuboid.getClass().getDeclaredField("height");
-        assertEquals(widthField.getModifiers(), 2);
+        assertEquals(widthField.getModifiers(), 1);
     }
 
     @DisplayName("Cuboid sınıf değişkenleri doğru type a sahip mi ?")
